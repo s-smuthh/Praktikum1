@@ -1,0 +1,18 @@
+public class SeriesDevelopment {
+	public static void main(String... args){	
+		boolean counterEven = true;
+		int counter = 0;
+		double result = 0;
+		while(Math.abs((Math.PI-result*4)) > 1e-6){
+			//System.out.println(result*4);
+			if(counterEven){
+				result = result + (1.0/(counter * 2 +1));
+			} else {
+				result = result - (1.0/(counter * 2 +1));
+			}
+			counter++;
+			counterEven = !counterEven;
+		}
+		System.out.println(counter);
+	}
+}
